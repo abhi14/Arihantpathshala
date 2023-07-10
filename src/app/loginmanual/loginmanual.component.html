@@ -1,0 +1,104 @@
+
+   <!-- <mat-tab-group color="primary" backgroundColor="accent"> -->
+     
+<main class="profile-page">
+    <section class="section section-shaped section-lg">
+      
+      <div class="shape shape-style-1 bg-gradient-default">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    
+      <div class="container pt-lg-md">
+        <div class="row justify-content-center">
+          <div class="col-lg-5">
+            <div class="card bg-secondary shadow border-0">
+                <!-- <mat-tab label="First"> -->
+              <div class="card-header bg-white pb-5">
+                <div class="text-muted text-center mb-3">
+                  
+                  <div class="text-center mt-5">
+                    <h3  class=" my-4">अरिहंत
+                    </h3></div>                
+                  <!-- <img class="image image-cover" src="./assets/Arihant_logo.PNG"> -->
+                
+
+                <div class="avatar">
+                 
+                    <a  href="javascript:void(0)">
+                      <img  src="./assets/Arihant_logo.PNG" ></a>
+                   
+                  </div>
+                </div>            
+              </div>
+            
+              <div class="card-body px-lg-5 py-lg-5">
+                <div class="text-center text-muted mb-4">
+                  <small>sign in with credentials</small>
+                  <br>
+                  <span class="linkcolor">{{errorMessage}}</span>
+                </div>
+
+               
+                  <form [formGroup]="loginForm" role="form">
+                    <div class="form-group mb-3">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                        </div>
+                        <input  class="form-control"
+                        type="text"
+                        formControlName="mobile"
+                        name="mobile"
+                        id="mobile"
+                        placeholder="Mobile Number"
+                        maxlength="10"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
+                        digitOnly
+                      />
+                       
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group input-group-alternative">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                        </div>
+                        <input formControlName="password" class="form-control" placeholder="Password" type="password">
+                      </div>
+                    </div>
+                    
+                    <div class="text-center">
+                      <button type="button" (click)="saveForm()" class="btn btn-primary my-4">Sign in</button>
+                    </div>
+                  </form>              
+                <!-- <div class="row mt-3">
+                    <div class="col-6">
+                  
+                      <small>   <button mat-button color="primary">Forgot password?</button></small>
+                    </div>
+                    <div class="col-6 text-right">                    
+                      <small>   <button mat-button color="primary">Create new account</button></small>
+                    </div>
+                  </div> -->
+              </div>
+            <!-- </mat-tab> -->
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+<!-- </mat-tab-group> -->
+
+    

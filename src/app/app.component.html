@@ -1,0 +1,28 @@
+
+<mat-toolbar style="background-color:#b7ad3a">
+    <button mat-icon-button  class="text-muted"  aria-label="Example icon-button with menu icon"  color="black" (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="text-muted"  >भगवान श्री अजितनाथ</span>
+    <span class="example-spacer"></span>
+
+    <!-- <button mat-flat-button color="accent" *ngIf="!checkUser.chkUser()">Sign In</button> -->
+  <button mat-flat-button color="accent" *ngIf="checkUser.chkUser()" (click)="checkUser.logout()">Logout</button>
+
+  </mat-toolbar>
+  <mat-sidenav-container color="primary" class="example-container">
+  <mat-sidenav #drawer style="background-color:#c2cb7a" mode="side"  role="navigation">
+    <mat-nav-list>
+    <a mat-list-item  class="text-muted"  routerLink='/abhi'  (click)="drawer.toggle()"> <mat-icon>home</mat-icon></a>    
+    <a mat-list-item  class="text-muted"  routerLink='/devdarshan' (click)="drawer.toggle()"><mat-icon>theaters</mat-icon></a>  
+    </mat-nav-list>
+  </mat-sidenav>
+ 
+<mat-sidenav-content>
+  <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>
+
+  
+  
+
